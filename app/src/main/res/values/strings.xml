@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">BuscadorPeliculas</string>
+    <string name="app_name">Movie search</string>
+    <string name="button_search">Search movies</string>
 </resources>

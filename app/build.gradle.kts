@@ -33,9 +33,22 @@ android {
     kotlinOptions {
         jvmTarget = "11"
     }
+    // Con este apartado, y después de sincronizarlo, se generan las clases que representan
+    // cada uno de los layouts que hay en la aplicación
+    buildFeatures{
+        viewBinding = true
+    }
 }
 
 dependencies {
+
+    // retrofit -> para montar la llamada a internet
+    val retrofit2Version = "2.11.0"
+    // converter-gson -> librería que se se encarga de hacer el parse json
+    implementation("com.squareup.retrofit2:retrofit:$retrofit2Version")
+    implementation ("com.squareup.retrofit2:converter-gson:$retrofit2Version")
+    // Picasso -> Librería para mostrar imágenes a partir de una url que se le pasa como parámetro
+    implementation("com.squareup.picasso:picasso:2.8")
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
